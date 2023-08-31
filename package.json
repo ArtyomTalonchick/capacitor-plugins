@@ -1,15 +1,26 @@
 {
-  "name": "capacitor-plugins",
-  "version": "0.0.0",
+  "name": "@codebrew/capacitor-plugins",
+  "description": "A collection of third-party Capacitor plugins",
+  "author": {
+    "name": "Devin Kwon",
+    "email": "tienne89@gmail.com"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/codebrewlab/capacitor-plugins",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codebrewlab/capacitor-plugins.git"
+  },
+
+  "version": "0.0.0",
   "scripts": {},
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "lerna": "^7.1.5",
     "nx": "16.7.4",
-    "nx-cloud": "latest"
+    "prettier": "^2.3.2"
   },
   "workspaces": [
-    "packages/*"
+    "packages/user-agent"
   ]
 }

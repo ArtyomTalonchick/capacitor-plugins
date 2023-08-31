@@ -3,16 +3,23 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx-cloud",
+      "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
-        "accessToken": "YzJlMjkzMjUtYjZmMC00NGMzLWI5OTUtNjZiYjAyYjZmMjFjfHJlYWQtd3JpdGU="
+        "cacheableOperations": ["build"]
       }
     }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "{projectRoot}/packages/user-agent/dist"
+      ]
+    }
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/packages/**/*"],
+    "sharedGlobals": [],
+    "production": ["default"]
   }
 }
